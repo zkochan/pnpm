@@ -24,19 +24,19 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="npm">npm</h1>
-<p>pnpm is made as a more performance</p>
-<h2 id="why-is-npm2-faster-than-npm3">Why is npm2 faster than npm3?</h2>
-<p><em>(This article is a stub. you can help by expanding it.)</em></p>
-<h2 id="why-is-pnpm-faster-than-npm">Why is pnpm faster than npm?</h2>
-<p>npm performs its action in stages. That is, it performs one stage for all dependencies in the tree, then moves onto the next stage. In general, these are:</p>
-<ul>
-<li>Resolving: get package data and what dependencies it has. (high requests, low bandwidth)</li>
-<li>Fetching: fetch module contents (low requests, high bandwidth)</li>
-<li>Extracting: extracting module contents from .tar.gz (no network IO)</li>
-<li>Building: build compiled modules (no network IO)</li>
-</ul>
-<p>On the other hand, pnpm will eagerly move onto the next stage for a module even if other modules are stuck in earlier stages. This allows you to pnpm to more efficiently manage network IO: for instance, it can build compiled modules in the background while resolutions/fetches are still happening.</p>
+<p>pnpm is a reimplementation of <code>npm install</code>.</p>
+<h2 id="why&apos;s-pnpm-faster">Why&#x2019;s pnpm faster?</h2>
+<p>npm performs its action in stages. It performs one stage for all dependencies in the tree before moving onto the next stage. In general, these are:</p>
+<ol start="0">
+<li><strong>Resolving</strong>: get package data and what dependencies it has. (high requests, low bandwidth)</li>
+<li><strong>Fetching</strong>: fetch module contents (low requests, high bandwidth)</li>
+<li><strong>Extracting</strong>: extracting module contents from .tar.gz (no network IO)</li>
+<li><strong>Building</strong>: build compiled modules (no network IO)</li>
+</ol>
+<p>pnpm will eagerly move onto the next stage for a module even if other modules are stuck in earlier stages. This allows you to pnpm to more efficiently manage network IO: for instance, it can build compiled modules in the background while resolutions/fetches are still happening.</p>
 <p>There&#x2019;s more to it than this, but this is one of the big reasons.</p>
+<h2 id="why&apos;s-npm2-faster-than-npm3">Why&#x2019;s npm2 faster than npm3?</h2>
+<p><em>(This article is a stub. you can help by expanding it.)</em></p>
 <h2 id="will-pnpm-replace-npm">Will pnpm replace npm?</h2>
 <p><strong>No!</strong> pnpm is not a <em>replacement</em> for npm; rather, think of it as a <em>supplement</em> to npm.</p>
 <p>It&#x2019;s simply a rewrite of the <code>npm install</code> command that uses an alternate way to store your modules. It won&#x2019;t reimplement other things npm is used for (publishing, node_modules management, and so on).</p>
@@ -44,7 +44,8 @@
 <ul>
 <li>Windows is <a href="https://github.com/rstacruz/pnpm/issues/6">not fully supported</a> (yet).</li>
 <li>You can&#x2019;t install from <a href="https://docs.npmjs.com/cli/shrinkwrap">shrinkwrap</a> (yet).</li>
-<li>Things not ticked off in the <a href="index.html#preview-release">to do list</a> are obviously not feature-complete.</li>
+<li>Peer dependencies are a little trickier to deal with.</li>
+<li>Things not ticked off in the <a href="roadmap.html">to do list</a> are obviously not feature-complete.</li>
 </ul>
 <p>Got an idea for workarounds for these issues? <a href="https://github.com/rstacruz/pnpm/issues/new">Share them.</a></p>
 
@@ -73,9 +74,9 @@
               <ul class="submenu">
                 <li class="menu-item -level-2"><a href="vs-npm.html" class="link title -active link-vs-npm">npm</a>
                   <ul class="headings heading-list">
-                    <li class="heading-item -depth-2"><a href="#why-is-npm2-faster-than-npm3" class="hlink link-why-is-npm2-faster-than-npm3">Why is npm2 faster than npm3?</a>
+                    <li class="heading-item -depth-2"><a href="#why's-pnpm-faster" class="hlink link-why's-pnpm-faster">Why's pnpm faster?</a>
                     </li>
-                    <li class="heading-item -depth-2"><a href="#why-is-pnpm-faster-than-npm" class="hlink link-why-is-pnpm-faster-than-npm">Why is pnpm faster than npm?</a>
+                    <li class="heading-item -depth-2"><a href="#why's-npm2-faster-than-npm3" class="hlink link-why's-npm2-faster-than-npm3">Why's npm2 faster than npm3?</a>
                     </li>
                     <li class="heading-item -depth-2"><a href="#will-pnpm-replace-npm" class="hlink link-will-pnpm-replace-npm">Will pnpm replace npm?</a>
                     </li>

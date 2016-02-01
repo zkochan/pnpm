@@ -84,14 +84,14 @@
             "slug": "vs-npm",
             "headings": [
               {
-                "title": "Why is npm2 faster than npm3?",
+                "title": "Why's pnpm faster?",
                 "depth": 2,
-                "id": "why-is-npm2-faster-than-npm3"
+                "id": "why's-pnpm-faster"
               },
               {
-                "title": "Why is pnpm faster than npm?",
+                "title": "Why's npm2 faster than npm3?",
                 "depth": 2,
-                "id": "why-is-pnpm-faster-than-npm"
+                "id": "why's-npm2-faster-than-npm3"
               },
               {
                 "title": "Will pnpm replace npm?",
@@ -186,14 +186,14 @@
       "slug": "vs-npm",
       "headings": [
         {
-          "title": "Why is npm2 faster than npm3?",
+          "title": "Why's pnpm faster?",
           "depth": 2,
-          "id": "why-is-npm2-faster-than-npm3"
+          "id": "why's-pnpm-faster"
         },
         {
-          "title": "Why is pnpm faster than npm?",
+          "title": "Why's npm2 faster than npm3?",
           "depth": 2,
-          "id": "why-is-pnpm-faster-than-npm"
+          "id": "why's-npm2-faster-than-npm3"
         },
         {
           "title": "Will pnpm replace npm?",
