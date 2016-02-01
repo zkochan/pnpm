@@ -94,6 +94,11 @@
                 "id": "why's-npm2-faster-than-npm3"
               },
               {
+                "title": "npm3's flat tree",
+                "depth": 2,
+                "id": "npm3's-flat-tree"
+              },
+              {
                 "title": "Will pnpm replace npm?",
                 "depth": 2,
                 "id": "will-pnpm-replace-npm"
@@ -194,6 +199,11 @@
           "title": "Why's npm2 faster than npm3?",
           "depth": 2,
           "id": "why's-npm2-faster-than-npm3"
+        },
+        {
+          "title": "npm3's flat tree",
+          "depth": 2,
+          "id": "npm3's-flat-tree"
         },
         {
           "title": "Will pnpm replace npm?",

@@ -37,6 +37,9 @@
 <p>There&#x2019;s more to it than this, but this is one of the big reasons.</p>
 <h2 id="why&apos;s-npm2-faster-than-npm3">Why&#x2019;s npm2 faster than npm3?</h2>
 <p><em>(This article is a stub. you can help by expanding it.)</em></p>
+<h2 id="npm3&apos;s-flat-tree">npm3&#x2019;s flat tree</h2>
+<p>npm now maintains a <a href="https://github.com/npm/npm/issues/6912">flattened dependency tree</a> as of version 3. This leads to less disk space bloat, with a messy <code>node_modules</code> directory as a side effect.</p>
+<p>On the other hand, pnpm manages <code>node_modules</code> as an addressable storage in its <a href="store-layout.html">store layout</a>. This nets you the benefits of less disk space usage, while keeping your <code>node_modules</code> clean.</p>
 <h2 id="will-pnpm-replace-npm">Will pnpm replace npm?</h2>
 <p><strong>No!</strong> pnpm is not a <em>replacement</em> for npm; rather, think of it as a <em>supplement</em> to npm. It&#x2019;s simply a rewrite of the <code>npm install</code> command that uses an alternate way to store your modules. It won&#x2019;t reimplement other things npm is used for (publishing, node_modules management, and so on).</p>
 <h2 id="limitations">Limitations</h2>
@@ -76,6 +79,8 @@
                     <li class="heading-item -depth-2"><a href="#why's-pnpm-faster" class="hlink link-why's-pnpm-faster">Why's pnpm faster?</a>
                     </li>
                     <li class="heading-item -depth-2"><a href="#why's-npm2-faster-than-npm3" class="hlink link-why's-npm2-faster-than-npm3">Why's npm2 faster than npm3?</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#npm3's-flat-tree" class="hlink link-npm3's-flat-tree">npm3's flat tree</a>
                     </li>
                     <li class="heading-item -depth-2"><a href="#will-pnpm-replace-npm" class="hlink link-will-pnpm-replace-npm">Will pnpm replace npm?</a>
                     </li>
