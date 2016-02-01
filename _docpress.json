@@ -230,6 +230,7 @@
     "docs/roadmap.md": "roadmap.html",
     "docs/vs-npm.md": "vs-npm.html",
     "docs/vs-ied.md": "vs-ied.html",
-    "docs/docpress.json": "docpress.json"
+    "docs/docpress.json": "docpress.json",
+    "docs/images/screencast.gif": "images/screencast.gif"
   }
 }
