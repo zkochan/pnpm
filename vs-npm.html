@@ -28,8 +28,8 @@
 <h2 id="why&apos;s-pnpm-faster">Why&#x2019;s pnpm faster?</h2>
 <p>npm performs its action in stages. It performs one stage for all dependencies in the tree before moving onto the next stage. In general, these are:</p>
 <ol start="0">
-<li><strong>Resolving</strong>: get package data and what dependencies it has. (high requests, low bandwidth)</li>
-<li><strong>Fetching</strong>: fetch module contents (low requests, high bandwidth)</li>
+<li><strong>Resolving</strong>: get package data and what dependencies it has. (many requests, low bandwidth)</li>
+<li><strong>Fetching</strong>: fetch module contents (less requests, high bandwidth)</li>
 <li><strong>Extracting</strong>: extracting module contents from .tar.gz (no network IO)</li>
 <li><strong>Building</strong>: build compiled modules (no network IO)</li>
 </ol>
