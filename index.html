@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="assets/script.js?t=2bcc4b59"></script>
+    <title>pnpm</title>
+    <meta name="viewport" content="width=device-width">
+    <script>
+      if (false || window.location.hostname.indexOf("ricostacruz.com") === window.location.hostname.length - 15) {
+        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create',"UA-20473929-1",'auto')
+      }
+    </script>
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-index">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/rstacruz/pnpm" data-title="rstacruz/pnpm" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 class="massive-header -with-tagline" id="pnpm">pnpm</h1>
+<blockquote>
+<p>Performant npm installations</p>
+</blockquote>
+<p>pnpm is a fast implementation of <code>npm install</code>. It is loosely based off <a href="https://github.com/alexanderGugel/ied">ied</a>.</p>
+<p><img src="https://raw.githubusercontent.com/rstacruz/pnpm/gh-pages/screencast.gif" alt=""></p>
+<p><a href="https://badge.fury.io/js/pnpm.js"><img src="https://badge.fury.io/js/pnpm.js.svg" alt="npm version"></a>
+<a href="https://travis-ci.org/rstacruz/pnpm" title="See test builds"><img src="https://travis-ci.org/rstacruz/pnpm.svg?branch=master" alt="Status"></a></p>
+<h2 id="install">Install</h2>
+<p>Install it via npm.</p>
+<pre><code>npm install -g pnpm.js
+</code></pre>
+<p>Use <code>pnpm</code> in place of <code>npm</code>. It overrides <code>pnpm i</code> and <code>pnpm install</code>&#x2014;all other commands will passthru to <code>npm</code>.</p>
+<pre><code>pnpm install lodash
+</code></pre>
+<h2 id="custom-registries">Custom registries</h2>
+<p>pnpm uses whatever npm&#x2019;s configured to use as its registry. See: <a href="custom-registries.html">custom registries</a>.</p>
+<h2 id="preview-release">Preview release</h2>
+<p><code>pnpm</code> will stay in <code>&lt;1.0.0</code> until it&#x2019;s achieved feature parity with <code>npm install</code>. See <a href="roadmap.html">roadmap</a> for details.</p>
+<h2 id="benchmark">Benchmark</h2>
+<pre><code>time npm i babel-preset-es2015 browserify chalk debug minimist mkdirp
+    66.15 real        15.60 user         3.54 sys
+</code></pre>
+<pre><code>time pnpm i babel-preset-es2015 browserify chalk debug minimist mkdirp
+    11.04 real         6.85 user         2.85 sys
+</code></pre>
+<h2 id="design">Design</h2>
+<p><code>pnpm</code> maintains a flat storage of all your dependencies in <code>node_modules/.store</code>. They are then symlinked whereever they&#x2019;re needed.
+See <a href="store-layout.html">store layout</a> for an explanation.</p>
+<pre><code>.
+&#x2514;&#x2500; node_modules/
+   &#x251C;&#x2500; .store/
+   &#x2502;  &#x251C;&#x2500; chalk@1.1.1/_/
+   &#x2502;  &#x2502;  &#x2514;&#x2500; node_modules/
+   &#x2502;  &#x2502;     &#x251C;&#x2500; ansi-styles      -&gt; ../../../ansi-styles@2.1.0/_
+   &#x2502;  &#x2502;     &#x2514;&#x2500; has-ansi         -&gt; ../../../has-ansi@2.0.0/_
+   &#x2502;  &#x251C;&#x2500; ansi-styles@2.1.0/_/
+   &#x2502;  &#x2514;&#x2500; has-ansi@2.0.0/_/
+   &#x2514;&#x2500; chalk                     -&gt; .store/chalk@1.1.1/_
+</code></pre>
+<h2 id="prior-art">Prior art</h2>
+<ul>
+<li><a href="vs-npm.html">Compared to ied</a></li>
+<li><a href="vs-npm.html">Compared to npm</a></li>
+</ul>
+<h2 id="thanks">Thanks</h2>
+<p><strong>pnpm</strong> &#xA9; 2016+, Rico Sta. Cruz. Released under the <a href="http://mit-license.org/">MIT</a> License.<br>
+Authored and maintained by Rico Sta. Cruz with help from contributors (<a href="http://github.com/rstacruz/pnpm/contributors">list</a>).</p>
+<blockquote>
+<p><a href="http://ricostacruz.com">ricostacruz.com</a> &#xA0;&#xB7;&#xA0;
+GitHub <a href="https://github.com/rstacruz">@rstacruz</a> &#xA0;&#xB7;&#xA0;
+Twitter <a href="https://twitter.com/rstacruz">@rstacruz</a></p>
+</blockquote>
+
+        </div>
+        <div class="footer-nav">
+          <div class="right"><a href="custom-registries.html"><span class="label">Next: </span><span class="title">Custom registries</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title -active link-index">pnpm</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-2"><a href="#install" class="hlink link-install">Install</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#custom-registries" class="hlink link-custom-registries">Custom registries</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#preview-release" class="hlink link-preview-release">Preview release</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#benchmark" class="hlink link-benchmark">Benchmark</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#design" class="hlink link-design">Design</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#prior-art" class="hlink link-prior-art">Prior art</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#thanks" class="hlink link-thanks">Thanks</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Features</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="custom-registries.html" class="link title  link-custom-registries">Custom registries</a>
+                </li>
+                <li class="menu-item -level-2"><a href="store-layout.html" class="link title  link-store-layout">Store layout</a>
+                </li>
+                <li class="menu-item -level-2"><a href="roadmap.html" class="link title  link-roadmap">Roadmap</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Comparison</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="vs-npm.html" class="link title  link-vs-npm">npm</a>
+                </li>
+                <li class="menu-item -level-2"><a href="vs-ied.html" class="link title  link-vs-ied">ied</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

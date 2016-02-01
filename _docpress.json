@@ -1,0 +1,225 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "pnpm",
+        "source": "README.md",
+        "url": "index.html",
+        "slug": "index",
+        "headings": [
+          {
+            "title": "Install",
+            "depth": 2,
+            "id": "install"
+          },
+          {
+            "title": "Custom registries",
+            "depth": 2,
+            "id": "custom-registries"
+          },
+          {
+            "title": "Preview release",
+            "depth": 2,
+            "id": "preview-release"
+          },
+          {
+            "title": "Benchmark",
+            "depth": 2,
+            "id": "benchmark"
+          },
+          {
+            "title": "Design",
+            "depth": 2,
+            "id": "design"
+          },
+          {
+            "title": "Prior art",
+            "depth": 2,
+            "id": "prior-art"
+          },
+          {
+            "title": "Thanks",
+            "depth": 2,
+            "id": "thanks"
+          }
+        ]
+      },
+      {
+        "title": "Features",
+        "sections": [
+          {
+            "title": "Custom registries",
+            "source": "docs/custom-registries.md",
+            "url": "custom-registries.html",
+            "slug": "custom-registries"
+          },
+          {
+            "title": "Store layout",
+            "source": "docs/store-layout.md",
+            "url": "store-layout.html",
+            "slug": "store-layout",
+            "headings": [
+              {
+                "title": "Peer dependencies",
+                "depth": 2,
+                "id": "peer-dependencies"
+              }
+            ]
+          },
+          {
+            "title": "Roadmap",
+            "source": "docs/roadmap.md",
+            "url": "roadmap.html",
+            "slug": "roadmap"
+          }
+        ]
+      },
+      {
+        "title": "Comparison",
+        "sections": [
+          {
+            "title": "npm",
+            "source": "docs/vs-npm.md",
+            "url": "vs-npm.html",
+            "slug": "vs-npm",
+            "headings": [
+              {
+                "title": "Why is npm2 faster than npm3?",
+                "depth": 2,
+                "id": "why-is-npm2-faster-than-npm3"
+              },
+              {
+                "title": "Why is pnpm faster than npm?",
+                "depth": 2,
+                "id": "why-is-pnpm-faster-than-npm"
+              },
+              {
+                "title": "Will pnpm replace npm?",
+                "depth": 2,
+                "id": "will-pnpm-replace-npm"
+              },
+              {
+                "title": "Limitations",
+                "depth": 2,
+                "id": "limitations"
+              }
+            ]
+          },
+          {
+            "title": "ied",
+            "source": "docs/vs-ied.md",
+            "url": "vs-ied.html",
+            "slug": "vs-ied"
+          }
+        ]
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "README.md",
+      "title": "pnpm",
+      "slug": "index",
+      "headings": [
+        {
+          "title": "Install",
+          "depth": 2,
+          "id": "install"
+        },
+        {
+          "title": "Custom registries",
+          "depth": 2,
+          "id": "custom-registries"
+        },
+        {
+          "title": "Preview release",
+          "depth": 2,
+          "id": "preview-release"
+        },
+        {
+          "title": "Benchmark",
+          "depth": 2,
+          "id": "benchmark"
+        },
+        {
+          "title": "Design",
+          "depth": 2,
+          "id": "design"
+        },
+        {
+          "title": "Prior art",
+          "depth": 2,
+          "id": "prior-art"
+        },
+        {
+          "title": "Thanks",
+          "depth": 2,
+          "id": "thanks"
+        }
+      ]
+    },
+    "custom-registries.html": {
+      "source": "docs/custom-registries.md",
+      "title": "Custom registries",
+      "slug": "custom-registries"
+    },
+    "store-layout.html": {
+      "source": "docs/store-layout.md",
+      "title": "Store layout",
+      "slug": "store-layout",
+      "headings": [
+        {
+          "title": "Peer dependencies",
+          "depth": 2,
+          "id": "peer-dependencies"
+        }
+      ]
+    },
+    "roadmap.html": {
+      "source": "docs/roadmap.md",
+      "title": "Roadmap",
+      "slug": "roadmap"
+    },
+    "vs-npm.html": {
+      "source": "docs/vs-npm.md",
+      "title": "npm",
+      "slug": "vs-npm",
+      "headings": [
+        {
+          "title": "Why is npm2 faster than npm3?",
+          "depth": 2,
+          "id": "why-is-npm2-faster-than-npm3"
+        },
+        {
+          "title": "Why is pnpm faster than npm?",
+          "depth": 2,
+          "id": "why-is-pnpm-faster-than-npm"
+        },
+        {
+          "title": "Will pnpm replace npm?",
+          "depth": 2,
+          "id": "will-pnpm-replace-npm"
+        },
+        {
+          "title": "Limitations",
+          "depth": 2,
+          "id": "limitations"
+        }
+      ]
+    },
+    "vs-ied.html": {
+      "source": "docs/vs-ied.md",
+      "title": "ied",
+      "slug": "vs-ied"
+    }
+  },
+  "sources": {
+    "README.md": "index.html",
+    "docs/custom-registries.md": "custom-registries.html",
+    "docs/store-layout.md": "store-layout.html",
+    "docs/roadmap.md": "roadmap.html",
+    "docs/vs-npm.md": "vs-npm.html",
+    "docs/vs-ied.md": "vs-ied.html",
+    "docs/docpress.json": "docpress.json"
+  }
+}

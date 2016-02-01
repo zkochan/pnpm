@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="assets/script.js?t=2bcc4b59"></script>
+    <title>Roadmap</title>
+    <meta name="viewport" content="width=device-width">
+    <script>
+      if (false || window.location.hostname.indexOf("ricostacruz.com") === window.location.hostname.length - 15) {
+        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create',"UA-20473929-1",'auto')
+      }
+    </script>
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-roadmap">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/rstacruz/pnpm" data-title="rstacruz/pnpm" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="roadmap">Roadmap</h1>
+<p><code>pnpm</code> will stay in <code>&lt;1.0.0</code> until it&#x2019;s achieved feature parity with <code>npm install</code>.</p>
+<ul>
+<li>[ ] <code>pnpm install</code>
+<ul>
+<li>[x] npm packages</li>
+<li>[x] install from packages (<code>npm i</code>)</li>
+<li>[x] @scoped packages (<code>npm i @rstacruz/tap-spec</code>)</li>
+<li>[x] tarball release packages (<code>npm i http://foo.com/tar.tgz</code>)</li>
+<li>[x] compiled packages (<code>npm i node-sass</code>)</li>
+<li>[x] bundled dependencies (<code>npm i fsevents@1.0.6</code>)</li>
+<li>[ ] git-hosted packages (<code>npm i rstacruz/scourjs</code>)</li>
+<li>[ ] optional dependencies (<code>npm i escodegen@1.8.0</code> wants <code>source-map@~0.2.0</code>)</li>
+<li>[ ] file packages (<code>npm i file:../path</code>)</li>
+<li>[x] bin executables</li>
+<li>[ ] <code>--global</code> installs</li>
+<li>[x] <code>--save</code> (et al)</li>
+</ul>
+</li>
+<li>[ ] <code>pnpm uninstall</code></li>
+<li>[x] <code>pnpm ls</code></li>
+</ul>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="store-layout.html"><span class="title">Store layout</span></a></div>
+          <div class="right"><a href="vs-npm.html"><span class="label">Next: </span><span class="title">npm</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">pnpm</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Features</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="custom-registries.html" class="link title  link-custom-registries">Custom registries</a>
+                </li>
+                <li class="menu-item -level-2"><a href="store-layout.html" class="link title  link-store-layout">Store layout</a>
+                </li>
+                <li class="menu-item -level-2"><a href="roadmap.html" class="link title -active link-roadmap">Roadmap</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Comparison</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="vs-npm.html" class="link title  link-vs-npm">npm</a>
+                </li>
+                <li class="menu-item -level-2"><a href="vs-ied.html" class="link title  link-vs-ied">ied</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="assets/script.js?t=2bcc4b59"></script>
+    <title>Store layout</title>
+    <meta name="viewport" content="width=device-width">
+    <script>
+      if (false || window.location.hostname.indexOf("ricostacruz.com") === window.location.hostname.length - 15) {
+        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create',"UA-20473929-1",'auto')
+      }
+    </script>
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-store-layout">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/rstacruz/pnpm" data-title="rstacruz/pnpm" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="store-layout">Store layout</h1>
+<p><code>pnpm</code> maintains a flat storage of all your dependencies in <code>node_modules/.store</code>. They are then symlinked whereever they&#x2019;re needed.
+This is like <code>npm@2</code>&apos;s recursive module handling (without the disk space bloat), and like <code>npm@3</code>s flat dependency tree (except with each module being predictably atomic).
+To illustrate, an installation of <a href="https://github.com/chalk/chalk">chalk</a>@1.1.1 may look like this:</p>
+<pre><code>.
+&#x2514;&#x2500; node_modules/
+   &#x251C;&#x2500; .store/
+   &#x2502;  &#x251C;&#x2500; chalk@1.1.1/_/
+   &#x2502;  &#x2502;  &#x2514;&#x2500; node_modules/
+   &#x2502;  &#x2502;     &#x251C;&#x2500; ansi-styles      -&gt; ../../../ansi-styles@2.1.0/_
+   &#x2502;  &#x2502;     &#x251C;&#x2500; has-ansi         -&gt; ../../../has-ansi@2.0.0/_
+   &#x2502;  &#x2502;     &#x2514;&#x2500; supports-color   -&gt; ../../../supports-color@2.0.0/_
+   &#x2502;  &#x251C;&#x2500; ansi-styles@2.1.0/_/
+   &#x2502;  &#x251C;&#x2500; has-ansi@2.0.0/_/
+   &#x2502;  &#x2514;&#x2500; supports-color@2.0.0/_/
+   &#x2514;&#x2500; chalk                     -&gt; .store/chalk@1.1.1/_
+</code></pre>
+<p>The intermediate <code>_</code> directories are needed to hide <code>node_modules</code> from npm utilities like <code>npm ls</code>, <code>npm prune</code>, <code>npm shrinkwrap</code> and so on. The name <code>_</code> is chosen because it helps make stack traces readable.</p>
+<h2 id="peer-dependencies">Peer dependencies</h2>
+<p>Symlinks to deep dependencies are stored in <code>node_modules/.store/node_modules</code>, in addition to the diagram above. It looks something like this:</p>
+<pre><code>.
+&#x2514;&#x2500; node_modules/
+   &#x251C;&#x2500; .store/
+   &#x2502;  &#x251C;&#x2500; chalk@1.1.1/_/
+   &#x2502;  &#x251C;&#x2500; ansi-styles@2.1.0/_/
+   &#x2502;  &#x251C;&#x2500; has-ansi@2.0.0/_/
+   &#x2502;  &#x2514;&#x2500; node_modules/
+   &#x2502;     &#x2514;&#x2500; ansi-styles         -&gt; ../ansi-styles@2.1.0/_
+   &#x2502;     &#x2514;&#x2500; has-ansi            -&gt; ../has-ansi@2.0.0/_
+   &#x2514;&#x2500; chalk                     -&gt; .store/chalk@1.1.1/_
+</code></pre>
+<p>In the example above, this allows <code>ansi-styles</code> to <code>require(&apos;has-ansi&apos;)</code>. This is necessary to make certain packages work, such as <a href="https://github.com/feross/standard">standard</a> (<a href="http://eslint.org/">eslint</a> + <a href="https://github.com/feross/eslint-config-standard">eslint-config-standard</a>).</p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="custom-registries.html"><span class="title">Custom registries</span></a></div>
+          <div class="right"><a href="roadmap.html"><span class="label">Next: </span><span class="title">Roadmap</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">pnpm</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Features</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="custom-registries.html" class="link title  link-custom-registries">Custom registries</a>
+                </li>
+                <li class="menu-item -level-2"><a href="store-layout.html" class="link title -active link-store-layout">Store layout</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#peer-dependencies" class="hlink link-peer-dependencies">Peer dependencies</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a href="roadmap.html" class="link title  link-roadmap">Roadmap</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Comparison</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="vs-npm.html" class="link title  link-vs-npm">npm</a>
+                </li>
+                <li class="menu-item -level-2"><a href="vs-ied.html" class="link title  link-vs-ied">ied</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>
