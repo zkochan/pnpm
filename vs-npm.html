@@ -33,13 +33,12 @@
 <li><strong>Extracting</strong>: extracting module contents from .tar.gz (no network IO)</li>
 <li><strong>Building</strong>: build compiled modules (no network IO)</li>
 </ol>
-<p>pnpm will eagerly move onto the next stage for a module even if other modules are stuck in earlier stages. This allows you to pnpm to more efficiently manage network IO: for instance, it can build compiled modules in the background while resolutions/fetches are still happening.</p>
+<p>pnpm will eagerly move onto the next stage for a module even if other modules are stuck in earlier stages. This allows pnpm to more efficiently manage network IO: for instance, it can build compiled modules in the background while resolutions/fetches are still happening.</p>
 <p>There&#x2019;s more to it than this, but this is one of the big reasons.</p>
 <h2 id="why&apos;s-npm2-faster-than-npm3">Why&#x2019;s npm2 faster than npm3?</h2>
 <p><em>(This article is a stub. you can help by expanding it.)</em></p>
 <h2 id="will-pnpm-replace-npm">Will pnpm replace npm?</h2>
-<p><strong>No!</strong> pnpm is not a <em>replacement</em> for npm; rather, think of it as a <em>supplement</em> to npm.</p>
-<p>It&#x2019;s simply a rewrite of the <code>npm install</code> command that uses an alternate way to store your modules. It won&#x2019;t reimplement other things npm is used for (publishing, node_modules management, and so on).</p>
+<p><strong>No!</strong> pnpm is not a <em>replacement</em> for npm; rather, think of it as a <em>supplement</em> to npm. It&#x2019;s simply a rewrite of the <code>npm install</code> command that uses an alternate way to store your modules. It won&#x2019;t reimplement other things npm is used for (publishing, node_modules management, and so on).</p>
 <h2 id="limitations">Limitations</h2>
 <ul>
 <li>Windows is <a href="https://github.com/rstacruz/pnpm/issues/6">not fully supported</a> (yet).</li>
